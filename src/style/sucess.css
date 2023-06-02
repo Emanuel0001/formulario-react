@@ -1,0 +1,55 @@
+
+.page {
+    display: flex;
+   align-items: center;
+   justify-content: center;
+ 
+   height: 100vh;
+   background: linear-gradient(338deg, #644091 35%, #392455 35%, #392455 65% , #644091 65%);
+ }
+
+ .mainSuccess {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 600px;
+
+    background-color: white;
+    border-radius: 15px;
+
+ }
+
+ video {
+    height: 400px;
+}
+
+.mainSuccess h1 {
+    display: block;
+    
+    color: rgb(59, 57, 57);
+    animation: message 3s ease-in;
+
+    text-align: center;
+}
+
+@keyframes message {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(10px);
+        opacity: 0;
+
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+
+    }
+}
+
+
+ 
