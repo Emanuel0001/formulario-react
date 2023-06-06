@@ -67,7 +67,7 @@ function App() {
   function validaTelefone(event) {
     setIsPhone(event.target.value);
     const textColor = document.getElementById('label-phone');
-    if (isPhone.length >= 14) {
+    if (isPhone.length === 14) {
       textColor.style = "color: purple"
       setIsPhoneValid(true)
     } else {
@@ -116,7 +116,7 @@ function App() {
   return (
     <div className="App" id="App">
       <main>
-        <form className="form" onSubmit={submitForm}>
+        <form className="form" onSubmit={submitForm} name="contact" netlify>
           <h1>
             Envie-nos uma mensagem!
             <span>
