@@ -4,7 +4,7 @@
 
 ## Projeto
 
-Este projeto é um formulário criado em Reactjs utilizando também  HTML, CSS. O formulário criado será integrado com a funcionalidade api que está localizada na render.com, que permitirá o armazenamento das informações enviadas através e serão salvas no banco de dados postgre na railway.app.
+Este projeto é um formulário criado em Reactjs utilizando também  HTML, CSS. O formulário criado será integrado com uma API(Application Programming Interface ), que está localizada na render.com, que permitirá o armazenamento das informações enviadas através e serão salvas no banco de dados postgre na railway.app.
 rocket Tecnologias
 
     HTML
