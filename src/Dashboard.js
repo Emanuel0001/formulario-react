@@ -95,10 +95,21 @@ function App() {
       return true;
     }
   }
-  function submitForm(event) {
+  async function submitForm(event) {
     event.preventDefault();
-    navigate("/success");
-    console.log('clicou')
+    let response = await fetch('http://localhost:3001/submitForm', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email: isEmail, name: isName, company: isNameEmpresa, phone: isPhone, message: isMessage })
+    })
+     const res = await response.json();
+    console.log(res)
+
+    if(res.success) {
+      navigate("/success");
+    }     
   }
 
   const handlePhone = (event) => {
@@ -116,7 +127,7 @@ function App() {
   return (
     <div className="App" id="App">
       <main>
-        <form className="form" onSubmit={submitForm} name="contact" netlify>
+        <form className="form" onSubmit={submitForm}>
           <h1>
             Envie-nos uma mensagem!
             <span>
@@ -207,8 +218,8 @@ function App() {
             </div>
           </div>
           <div className="contact-socials">
-          <a href="#"> <FaFacebookF size={40} className="socials-icon" /></a>
-          <a href="#"><FaTwitter size={40} className="socials-icon" /></a>
+          <a href="."> <FaFacebookF size={40} className="socials-icon" /></a>
+          <a href="."><FaTwitter size={40} className="socials-icon" /></a>
           <a href="https://www.linkedin.com/in/emanuel-hitallo-06690a16b/" target="black_"><FaLinkedinIn size={40} className="socials-icon" /></a>
           
 
