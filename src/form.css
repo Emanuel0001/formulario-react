@@ -186,3 +186,10 @@ main {
 .icon-info {
   color: rgba(240, 248, 255, 0.567);
 }
+
+@media only screen and (max-width: 1000px) {
+.contact {
+  display: none;
+}
+
+}
