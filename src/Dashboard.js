@@ -97,7 +97,7 @@ function App() {
   }
   async function submitForm(event) {
     event.preventDefault();
-    let response = await fetch('http://localhost:3001/submitForm', {
+    let response = await fetch('https://api-form-react.onrender.com/submitForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
